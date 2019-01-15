@@ -1,4 +1,8 @@
 git clone -b v19.01  https://github.com/fireball-QMD/progs test
+git checkout v19.01
+git commit --all -m '...'
+git push
+git add 'RUTA/a_archivo'
 test
 cd brach
 git checkout master
