@@ -9,7 +9,7 @@ cp charges.bk CHARGES
 mpirun  -np $i ../fireball.x > salida.out
 n=$(head -1 answer.xyz )
 ETOT=$(grep ETOT salida.out|tail -1 | tr -s ' ')
-sec=$(grep RUN salida.out | cut -d':' -f2 | cut -d'[' -f1)
+sec=$(grep RUN salida.out | cut -d':' -f2 | cut -d'[' -f1 | head -1)
 echo 'np = '$i'  : n_atom = '$n' : time = '$sec' : '$ETOT >> ../out
 cd ..
 done
